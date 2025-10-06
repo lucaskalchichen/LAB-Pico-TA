@@ -30,3 +30,14 @@ La solución propuesta se implementará en un microcontrolador que coordina la l
     
 ### Integración de los Monitoreos
 Ambos lazos de control funcionan de manera simultánea y complementaria: mientras el motor de paso regula el ascenso según temperatura y turbulencia, el sistema de indicadores luminosos comunica si la cápsula se encuentra en un estado apto para eyección.
+
+![WhatsApp Image 2025-10-02 at 13 57 07](https://github.com/user-attachments/assets/c756afd3-715d-4daf-af81-1603462fb952)
+
+
+## Detalles del desarrollo:
+El código fué desarrollado en Python, con la IDE TONY.
+### Las librerías utilizadas fueron:
+  - /lib/adafruit_minimqtt: Copiar la carpeta completa.
+  - /lib/adafruit_ticks.mpy: Módulo que necesita minimqtt.
+  - /lib/adafruit_connection_manager.mpy: Módulo que necesita minimqtt.
+  - /lib/adafruit_esp32spi_socketpool.mpy: Módulo para conectarnos a la red.
