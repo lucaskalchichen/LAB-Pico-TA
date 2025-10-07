@@ -335,7 +335,7 @@ def update_altitude(overheated, turbulent):
     global altura_actual, descenso_activo, parachute_active, parachute_closing
     
     # Calcular velocidad basada en RPM actual (RPM * 3)
-    velocidad_base = rpm_actual * 10
+    velocidad_base = rpm_actual * 3
     
     if descenso_activo:
         # Durante el descenso, velocidad proporcional a RPM (100 - RPM)
@@ -565,3 +565,4 @@ while True:
     
     # ---- Pausa del ciclo ----
     time.sleep(0.1)  # 100ms de ciclo para mantener responsividad
+
