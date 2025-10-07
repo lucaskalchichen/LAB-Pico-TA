@@ -276,7 +276,7 @@ def control_led_rgb(overheated, turbulent):
     now = time.monotonic()
     blink_interval = 0.5  # 500ms para parpadeo
 
-    elif overheated:
+    if overheated:
         # Parpadeo rojo para fuego (temperatura alta)
         if now - last_led_change >= blink_interval:
             led_state = not led_state
@@ -410,7 +410,7 @@ if wifi_connected:
 # =====================================================
 #                 FUNCION PUBLICACION MQTT
 # =====================================================
-def publish_mqtt_data(temp_digital, temp_analog, tilted, turbulent, altura):
+def publish_mqtt_data(temp_digital, temp_analog, tilted):
     global last_pub
     now = time.monotonic()
     
@@ -503,3 +503,4 @@ while True:
     
     # ---- Pausa del ciclo ----
     time.sleep(0.1)  # 100ms de ciclo para mantener responsividad
+
